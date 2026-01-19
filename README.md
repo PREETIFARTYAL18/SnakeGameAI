@@ -3,13 +3,14 @@
 This project implements a self-learning Snake Game using Deep Q-Learning.
 
 ## Training Performance
-[Training Graph](SnakeGameAI\assests\Training Progress Graph.jpeg)
+![Training Graph](assets/training_graph.png)
 
 ## Gameplay Videos
-[Watch Early Stage Trained Gameplay](SnakeGameAI\assests\Early stage snake training video.mp4)
-[Watch Mid Stage Trained Gameplay](SnakeGameAI\assests\Mid stage snake training video.mp4)
-[Watch Final Stage Trained Gameplay](SnakeGameAI\assests\After 100 training episodes video.mp4)
+[Watch Early Stage Training Gameplay](assets/early_training.mp4)
 
+[Watch Mid Stage Training Gameplay](assets/mid_training.mp4)
+
+[Watch Final Trained Gameplay (After 100 Episodes)](assets/final_training.mp4)
 ## Technologies Used
 - Python
 - PyTorch
