@@ -1,0 +1,147 @@
+# Snake Game AI using Deep Reinforcement Learning
+
+##  Project Overview
+
+This project is a **self-learning Snake Game AI** built using **Deep Reinforcement Learning (Deep Q-Learning)**. Instead of hard-coded rules, the snake agent learns optimal gameplay strategies by interacting with the environment, receiving rewards, and improving its decisions over time.
+
+The goal of this project is to understand how intelligent agents learn from experience and how reinforcement learning concepts are applied in a real-world game environment.
+
+##  Key Concepts Used
+
+* Reinforcement Learning (RL)
+* Deep Q-Network (DQN)
+* Experience Replay
+* Epsilon-Greedy Exploration
+* Reward-Based Learning
+* Model Persistence (Saving & Loading Trained Model)
+
+## How the Learning Works
+
+The Snake AI consists of two main components:
+
+### 1. Environment (Game)
+
+* The Snake game is built using **Pygame**.
+* The environment provides the current state of the game.
+* It returns rewards based on the agent’s actions.
+
+### 2. Agent (AI Model)
+
+* The agent observes the current state of the game.
+* It decides the next action using a neural network.
+* The model learns by maximizing cumulative rewards.
+
+###  Reward Strategy
+
+| Situation             | Reward |
+| --------------------- | ------ |
+| Eating food           | +10    |
+| Game over (collision) | -10    |
+| Normal movement       | 0      |
+
+##  State Representation
+
+The game state is represented using **11 values**, including:
+
+* Danger straight, left, right
+* Current movement direction
+* Food location relative to the snake
+
+These values are passed as input to the neural network.
+
+
+##  Project Structure
+
+SnakeGameAI/
+│
+├── assets/
+│   ├── early_training.mp4
+│   ├── mid_training.mp4
+│   ├── final_training.mp4
+│   └── training_graph.png
+│
+├── agent.py           # RL Agent logic
+├── model.py           # Neural network model (DQN)
+├── helper.py          # Plotting & utility functions
+├── snake_game.py      # Snake game environment
+├── snake_gameai.py    # Training loop
+└── README.md
+
+##  Training Performance
+
+The graph below shows how the Snake AI improves over training episodes:
+
+![Training performance graph showing improvement in Snake Game AI using Deep Q-Learning over multiple episodes](assets/training_graph.png)
+
+The increasing score trend demonstrates successful learning and better decision-making by the agent.
+
+##  Gameplay Videos
+
+Due to GitHub limitations, videos open via links:
+
+* [Early Stage Training Gameplay](assets/early_training.mp4)
+* [Mid Stage Training Gameplay](assets/mid_training.mp4)
+* [Final Trained Gameplay (After 100 Episodes)](assets/final_training.mp4)
+
+These videos show the progression from random movement to stable and optimized gameplay.
+
+##  How to Run the Project
+
+### Prerequisites
+
+* Python 3.8+
+* Pygame
+* PyTorch
+* NumPy
+* Matplotlib
+
+###  Install Dependencies
+
+pip install pygame torch numpy matplotlib
+
+### Run Snake Game (Manual Play)
+
+python snake_game.py
+
+###  Train the AI Agent
+
+python snake_gameai.py
+
+The trained model is automatically saved and reused in future runs.
+
+##  Model Persistence
+
+The trained neural network is saved locally, allowing the agent to:
+
+* Resume learning from the last trained state
+* Perform inference without retraining
+
+This prevents loss of learning progress when the program restarts.
+
+##  Possible Improvements
+
+* Use **Double DQN** for reduced overestimation
+* Add **Prioritized Experience Replay**
+* Increase state representation for better awareness
+* Optimize reward function
+* Deploy as a web-based game
+
+## Learning Outcomes
+
+* Practical understanding of Reinforcement Learning
+* Experience with Deep Neural Networks
+* Handling training stability issues
+* Difference between training and inference
+* Writing modular, maintainable code
+
+##  Conclusion
+
+This project demonstrates how reinforcement learning can be applied to real-world problems. Building this AI improved both my machine learning knowledge and my engineering mindset.
+
+##  Contact
+
+If you have feedback, suggestions, or collaboration ideas, feel free to connect.
+
+---
+
+**⭐ If you found this project helpful, consider starring the repository!**
